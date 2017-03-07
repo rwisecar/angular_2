@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-other',
-  templateUrl: './other.component.html',
-  styleUrls: ['./other.component.css']
+  selector: '#fa-other',
+  templateUrl: './other.component.html'
 })
 export class OtherComponent implements OnInit {
 
