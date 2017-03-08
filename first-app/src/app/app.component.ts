@@ -4,9 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>Inline Template</h1>
-    <div id="fa-other">"Well hello there!"</div>
+    <fa-other></fa-other>
+    <fa-another>
+        <div>
+            <h1>Hello world</h1>
+        </div>
+    </fa-another>
   `,
-  styleUrls: ['./app.component.css']
+  styles: [`
+      h1 {
+          color: red;
+      }
+  `]
 })
 export class AppComponent {
   title = 'Rachael\'s App';
