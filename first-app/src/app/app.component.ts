@@ -6,7 +6,7 @@ import { LifecycleComponent } from './lifecycle.component';
   template: `
     <h1>Root Component</h1>
     <fa-lifecycle *ngIf="!delete" [bindable]="boundValue">
-        <p>{{ test }}</p>
+        <p #boundContent>{{ test }}</p>
     </fa-lifecycle>
     <button (click)="delete = true"> Destruction </button>
     <button (click)="test = 'Changed Value'"> Click to Change Content</button>
