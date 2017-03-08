@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <h1>Inline Template</h1>
     <fa-other></fa-other>
-    <fa-another></fa-another>
+    <fa-another>
+        <div>
+            <h1>Hello world</h1>
+        </div>
+    </fa-another>
   `,
   styles: [`
       h1 {
