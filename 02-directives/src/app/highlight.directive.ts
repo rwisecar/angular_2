@@ -1,20 +1,25 @@
-import { Directive, HostListener, HostBinding } from '@angular/core';
+import { Directive, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[highlight]'
 })
 export class HighlightDirective {
     @HostListener('mouseenter') mouseover(){
-        this.backgroundColor = 'yellow';
+        this.backgroundColor = this.highlightColor;
     };
     @HostListener('mouseleave') mouseleave(){
-        this.backgroundColor = 'green';
+        this.backgroundColor = this.defaultColor;
     };
     @HostBinding('style.backgroundColor') get setColor(){
         return this.backgroundColor;
     };
-    private backgroundColor = 'green';
+    @Input() defaultColor = 'green';
+    @Input() highlightColor = 'yellow';
+    private backgroundColor: string;
     constructor() {
   }
 
+  ngOnInit(){
+    this.backgroundColor = this.defaultColor;
+  }
 }
