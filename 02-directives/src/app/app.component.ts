@@ -9,4 +9,8 @@ import { HighlightDirective } from './highlight.directive'
 })
 export class AppComponent {
   title = 'dir works!';
+  private switch = true;
+  onSwitch(){
+    this.switch = !this.switch;
+  }
 }
